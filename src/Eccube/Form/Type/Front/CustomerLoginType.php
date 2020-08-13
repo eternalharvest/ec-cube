@@ -49,6 +49,7 @@ class CustomerLoginType extends AbstractType
         $builder->add('login_email', EmailType::class, [
             'attr' => [
                 'max_length' => $this->eccubeConfig['eccube_stext_len'],
+                'autocomplete' => 'email',
             ],
             'constraints' => [
                 new Assert\NotBlank(),
@@ -62,6 +63,7 @@ class CustomerLoginType extends AbstractType
         $builder->add('login_pass', PasswordType::class, [
             'attr' => [
                 'max_length' => $this->eccubeConfig['eccube_stext_len'],
+                'autocomplete' => 'current-password',
             ],
             'constraints' => [
                 new Assert\NotBlank(),
