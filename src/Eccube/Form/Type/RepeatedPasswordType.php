@@ -68,11 +68,13 @@ class RepeatedPasswordType extends AbstractType
                     'placeholder' => trans('common.password_sample', [
                         '%min%' => $this->eccubeConfig['eccube_password_min_len'],
                         '%max%' => $this->eccubeConfig['eccube_password_max_len'], ]),
+                    'autocomplete' => 'new-password',
                 ],
             ],
             'second_options' => [
                 'attr' => [
                     'placeholder' => 'common.repeated_confirm',
+                    'autocomplete' => 'new-password',
                 ],
             ],
         ]);
